@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minimalist to-do list</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.0.0/knockout-min.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="zadatak.css">
+    
+</head>
+
+<body class="text">
+    <div class="container">
+        <h1 align="center">Minimalist to-do list</h1>
+        <form class="form-add">
+			<input id="new-task-name" class="form-control" placeholder="type in to-do text" />
+            <button id="add-new-task" class="btn btn-lg btn-primary btn btn-block" type="submit">Add new</button>
+        </form>
+       
+	   
+        <div class="list-items">
+			<!-- export and import buttons -->
+			<div style="margin:10px 0; width: 100%">
+				<button onclick="exportTableToCSV('members.csv')" style="margin-bottom:10px">Export to csv </button>
+				<div>
+					<span style="float:right">
+						<input type="file" id="fileUpload" style="display:inline-block"/>
+						<input type="button" id="upload" value="Upload"/>
+						<input type="checkbox" id="dataFlag" >Keep old data</input>
+					</span>
+				<div/>
+			</div>
+		
+		
+			<!-- to-do table -->
+            <table id="list-items" class="table table-hover table-striped table-bordered table-responsive" >
+				<thead>
+					<tr>
+						<th class="col-lg-5 btn-primary">To-do text</th>
+						<th class="col-lg-5 btn-primary">Completed</th>
+						<th class="col-lg-5 btn-primary">Delete</th>
+					</tr>
+					<tr>
+						<th id="list-items-msg">Empty table. There is no todo defined</th>
+					</tr>
+				</thead>          
+			</table>	
+		</div>
+		
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="zadatak.js"></script>
+	
+</body>
+</html>
